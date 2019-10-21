@@ -45,14 +45,25 @@ Create two computers object from your factory function and save them in one arra
 Note: please write one or two lines here describing your solution.
 */
 
-function makeComputer(type, color, weight) {
+function makeComputer(type, color, weight) { // asseining each value to it's key 
   // TODO: Your code here
+  return  { 
+  	type : type,
+  	color : color,
+  	weight : weight
+	}
 }
+
+var winComputer = makeComputer("actually usable laptop", "justblack", "too thicc but dangerous") // making 2 computers 
+var mac = makeComputer ("bad computer", "wierd color", "who cares")
+
+var computers = [winComputer, mac]	// making the array
 
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
   // TODO: Your code here
+  return computer;	//just returning the declared computer 
 }
 
 //=============================================================================
@@ -74,6 +85,9 @@ uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 
 function uppercaseAll(arrayOfStrings) {
   // TODO: your code here
+  return map (arrayOfStrings , function (string){ // i'm using map bc it's the one with least amount of code 
+  	return string.toUpperCase(); 
+  })
 }
 
 //=============================================================================
@@ -113,6 +127,9 @@ var data = [
 
 function highestPopulation(arrayOfObjects) {
   // TODO: your code here
+  return filter (arrayOfObjects , function(obj , key){ // again i used filter bc it will have the least amount of text.
+  	return obj.population > 500000000;
+  })
 }
 
 //=============================================================================
@@ -133,6 +150,9 @@ Note: please write one or two lines here describing your solution.
 
 function halveAll(numbers) {
   // your code is here
+  return map (numbers, function (number){ // i'm using map bc it's the one with least amount of text. 
+  	return number / 2; 
+  })
 }
 
 //=============================================================================
@@ -149,6 +169,9 @@ Note: please write one or two lines here describing your solution.
 */
 function values(obj) {
   // TODO: your code here
+  return map (obj , function(value){ // i used map bc it will use the least amout of code and just returned the values.
+  	return value;
+  })
 }
 
 //Good Luck :))
